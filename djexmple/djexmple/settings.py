@@ -10,6 +10,7 @@ def load_bool(name, default):
     env_value = os.getenv(name, default=str(default)).lower()
     return env_value in ("true", "yes", "1", "y", "t", "on")
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", default="no_key")
@@ -76,15 +77,15 @@ AUTH_PASSWORD_VALIDATORS = [
         ".UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation"
+        "NAME": "django.contrib.auth.password_validation" 
         ".MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation"
+        "NAME": "django.contrib.auth.password_validation" 
         ".CommonPasswordValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation"
+        "NAME": "django.contrib.auth.password_validation" 
         ".NumericPasswordValidator",
     },
 ]

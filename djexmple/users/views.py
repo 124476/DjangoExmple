@@ -2,6 +2,7 @@ import django.views
 
 import users.forms
 
+
 class Registration(django.views.View):
     form_class = users.forms.SignUpForm
     template_name = "users/signup.html"
@@ -12,7 +13,6 @@ class Registration(django.views.View):
             "form": form,
         }
         return django.shortcuts.render(request, self.template_name, context)
-
 
     def post(self, request):
         form = users.forms.SignUpForm(request.POST)
