@@ -12,6 +12,9 @@
             <a href="{% url 'homepage:main' %}"
                class="nav-link {% if view_name == 'homepage:main' %}active{% endif %}">Главная</a>
             {% if user.is_authenticated %}
+              <a href="{% url 'users:profile' %}"
+                 class="nav-link {% if view_name == 'users:profile' %}active{% endif %}"
+                 style="float: left">Профиль</a>
               <a href="{% url 'users:logout' %}"
                  class="nav-link {% if view_name == 'users:logout' %}active{% endif %}"
                  style="float: left">Выйти</a>
@@ -19,6 +22,11 @@
               <a href="{% url 'users:login' %}"
                  class="nav-link {% if view_name == 'users:login' %}active{% endif %}"
                  style="float: left">Войти</a>
+            {% endif %}
+            {% if request.user.is_staff %}
+              <a href="{% url 'admin:index' %}"
+                 class="nav-link {% if view_name == 'admin:index' %}active{% endif %}"
+                 style="float: left">Админ</a>
             {% endif %}
           </div>
         </nav>
