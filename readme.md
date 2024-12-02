@@ -10,10 +10,10 @@
 git clone https://github.com/124476/DjangoExmple
 ```
 
-#### Переходим в папку djexmple
+#### Переходим в папку djexample
 
 ```commandline
-cd djexmple
+cd djexample
 ```
 
 #### Создаём и активируем виртуальное окружение

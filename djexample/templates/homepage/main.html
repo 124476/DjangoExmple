@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Главная" %}{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2>{% trans "Список товаров" %}</h2>
+    <div class="card-group">
+      {% for item in items %}
+        {% include "includes/item_card.html" with item=item %}
+      {% empty %}
+        <p>{% trans "Список пуст" %}</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

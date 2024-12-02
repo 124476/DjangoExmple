@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-03 00:28+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\djexample\settings.py:121
+msgid "English"
+msgstr "Английский"
+
+#: .\djexample\settings.py:122
+msgid "Russian"
+msgstr "Русский"
+
+#: .\templates\homepage\main.html:5
+msgid "Главная"
+msgstr "Главная"
+
+#: .\templates\homepage\main.html:9
+msgid "Список товаров"
+msgstr "Список товаров"
+
+#: .\templates\homepage\main.html:14
+msgid "Список пуст"
+msgstr "Список пуст"
+
+#: .\templates\includes\user_form.html:61
+msgid "dont_have_account_yet"
+msgstr "Нет аккаунта?"
+
+#: .\templates\includes\user_form.html:63
+msgid "create_it"
+msgstr "Создать аккаунт"
+
+#: .\templates\users\email_change.html:4 .\templates\users\email_change.html:8
+msgid "Change Email"
+msgstr "Поменять почту"
+
+#: .\templates\users\email_change.html:14
+msgid "New Email"
+msgstr "Новая почта"
+
+#: .\templates\users\email_change.html:23
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\users\login.html:5
+msgid "authorization"
+msgstr "Авторизоваться"
+
+#: .\templates\users\login.html:12
+msgid "log_in_to"
+msgstr "Войти"
+
+#: .\templates\users\login.html:13
+msgid "sign_in"
+msgstr "Регистрация"
+
+#: .\templates\users\logout.html:4
+msgid "logout"
+msgstr "Выйти"
+
+#: .\templates\users\password_change.html:5
+#: .\templates\users\password_change.html:12
+msgid "password_change"
+msgstr "Изменить пароль"
+
+#: .\templates\users\password_change.html:13 .\templates\users\profile.html:79
+msgid "change_password"
+msgstr "Изменить пароль"
+
+#: .\templates\users\password_change_done.html:5
+msgid "password_changed"
+msgstr "Пароль изменён"
+
+#: .\templates\users\password_change_done.html:10
+msgid "your_password_be_success_changed"
+msgstr "Пароль успешно изменён!"
+
+#: .\templates\users\password_change_done.html:11
+msgid "to_main"
+msgstr "На главную"
+
+#: .\templates\users\profile.html:5 .\templates\users\profile.html:9
+msgid "my_profile"
+msgstr "Мой профиль"
+
+#: .\templates\users\profile.html:33
+msgid "delete_avatar"
+msgstr "Удалить аватар"
+
+#: .\templates\users\profile.html:64
+msgid "save"
+msgstr "Сохранить"
+
+#: .\templates\users\profile.html:73
+msgid "change_email"
+msgstr "Изменить почту"
+
+#: .\templates\users\signup.html:5
+msgid "registration"
+msgstr "Регистрация"
+
+#: .\templates\users\signup.html:12
+msgid "greeting"
+msgstr "Встреча"
+
+#: .\templates\users\signup.html:13
+msgid "register"
+msgstr "Зарегистрироваться"
+
+#: .\users\apps.py:8
+msgid "users"
+msgstr "Пользователи"
+
+#: .\users\models.py:9
+msgid "avatar"
+msgstr "Аватарка"
+
+#: .\users\views.py:34
+msgid "username_is_already_taken"
+msgstr "Такое имя пользователя уже использовано."
