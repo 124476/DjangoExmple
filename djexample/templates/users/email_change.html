@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block title %}{% trans "Change Email" %}{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/users/user-auth.css' %}">
+{% endblock %}
 
 {% block content %}
   <div class="container mt-5">
     <h1 class="text-center mb-4">{% trans "Change Email" %}</h1>
 
-    <form method="post" class="w-100 p-4 border rounded shadow-sm bg-light">
+    <form method="post" class="w-100 p-4 border rounded shadow-sm">
       {% csrf_token %}
 
       <div class="mb-3">

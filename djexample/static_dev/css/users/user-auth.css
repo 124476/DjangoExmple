@@ -3,11 +3,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
-}
-
 form {
     display: flex;
     flex-direction: column;
