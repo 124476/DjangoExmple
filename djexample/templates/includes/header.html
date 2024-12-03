@@ -2,58 +2,59 @@
 {% load active_link_tags %}
 {% load i18n %}
 
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-  <div class="container">
-    <nav>
-      {% with request.resolver_match.view_name as view_name %}
-        <a href="/">
-          <img src='{% static "/img/favicon.ico" %}' alt="" height="40">
-        </a>
-        <nav style="float:right">
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a href="{% url 'homepage:main' %}"
-               class="nav-link {% if view_name == 'homepage:main' %}active{% endif %}">Главная</a>
-            {% if user.is_authenticated %}
-              <a href="{% url 'users:profile' %}"
-                 class="nav-link {% if view_name == 'users:profile' %}active{% endif %}"
-                 style="float: left">Профиль</a>
-              <a href="{% url 'users:logout' %}"
-                 class="nav-link {% if view_name == 'users:logout' %}active{% endif %}"
-                 style="float: left">Выйти</a>
-            {% else %}
-              <a href="{% url 'users:login' %}"
-                 class="nav-link {% if view_name == 'users:login' %}active{% endif %}"
-                 style="float: left">Войти</a>
-            {% endif %}
-            {% if request.user.is_staff %}
-              <a href="{% url 'admin:index' %}"
-                 class="nav-link {% if view_name == 'admin:index' %}active{% endif %}"
-                 style="float: left">Админ</a>
-            {% endif %}
-          </div>
-          <nav class="my-auto nav-item dropdown me-2">
-            <button class="btn border-0 dropdown-toggle d-flex align-items-center" id="language-dropdown" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle language">
-              <i class="bi bi-globe me-2"></i>
-              <span class="d-none d-lg-block" id="language-text">{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE|language_name_translated }}</span>
-            </button>
-            <ul class="dropdown-menu dropend" aria-labelledby="language-text" data-bs-popper="static">
-            {% get_available_languages as LANGUAGES %}
-            {% for lang_code, lang_name in LANGUAGES %}
-              <li>
-                <form action="{% url 'set_language' %}" method="post" class="d-inline">
-                  {% csrf_token %}
-                  <input type="hidden" name="language" value="{{ lang_code }}">
-                  <button type="submit" class="dropdown-item d-flex align-items-center {% if lang_code == LANGUAGE_CODE %}active{% endif %}" aria-pressed="{% if lang_code == LANGUAGE_CODE %}true{% else %}false{% endif %}">
-                    <i class="bi bi-globe me-2"></i>
-                    {{ lang_name }}
-                  </button>
-                </form>
-              </li>
-            {% endfor %}
-            </ul>
-          </nav>
-        </nav>
-      {% endwith %}
+<header>
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <a href="/" class="logo d-flex align-items-center">
+      <img src="{% static 'img/favicon.ico' %}" alt="Logo" height="40">
+      <span class="ms-2 fw-bold">{% trans "MyWebsite" %}</span>
+    </a>
+    <nav class="d-flex">
+      <a href="{% url 'homepage:main' %}" class="{% if view_name == 'homepage:main' %}active{% endif %}">{% trans "Главная" %}</a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'users:profile' %}" class="{% if view_name == 'users:profile' %}active{% endif %}">{% trans "Профиль" %}</a>
+        <a href="{% url 'users:logout' %}" class="{% if view_name == 'users:logout' %}active{% endif %}">{% trans "Выйти" %}</a>
+      {% else %}
+        <a href="{% url 'users:login' %}" class="{% if view_name == 'users:login' %}active{% endif %}">{% trans "Войти" %}</a>
+      {% endif %}
+      {% if request.user.is_staff %}
+        <a href="{% url 'admin:index' %}" class="{% if view_name == 'admin:index' %}active{% endif %}">{% trans "Админ панель" %}</a>
+      {% endif %}
     </nav>
+    <nav class="dropdown">
+      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-globe"></i>
+        {{ LANGUAGE_CODE|default:"en"|language_name_translated }}
+      </button>
+      <ul class="dropdown-menu dropend" aria-labelledby="language-text" data-bs-popper="static">
+        {% get_available_languages as LANGUAGES %}
+        {% for lang_code, lang_name in LANGUAGES %}
+          <li>
+            <form action="{% url 'set_language' %}" method="post" class="d-inline">
+              {% csrf_token %}
+              <input type="hidden" name="language" value="{{ lang_code }}">
+              <button type="submit" class="dropdown-item language-button d-flex align-items-center {% if lang_code == LANGUAGE_CODE %}active{% endif %}" aria-pressed="{% if lang_code == LANGUAGE_CODE %}true{% else %}false{% endif %}">
+                <i class="bi bi-globe me-2"></i>
+                {{ lang_name }}
+              </button>
+            </form>
+          </li>
+        {% endfor %}
+        </ul>
+    </nav>
+    <nav class="my-auto nav-item dropdown">
+      <button class="btn border-0 dropdown-toggle d-flex align-items-center" id="theme-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i id="theme-icon-active" class="bi bi-sun-fill"></i>
+        <span>{% trans "theme" %}</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <button class="dropdown-item" data-bs-theme-value="light">{% trans "light" %}</button>
+        </li>
+        <li>
+          <button class="dropdown-item" data-bs-theme-value="dark">{% trans "dark" %}</button>
+        </li>
+      </ul>
+    </nav>    
   </div>
 </header>
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-03 00:28+0300\n"
+"POT-Creation-Date: 2024-12-04 00:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,25 +19,76 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: .\djexample\settings.py:121
+
+#: .\djexample\settings.py:122
 msgid "English"
 msgstr "Английский"
 
-#: .\djexample\settings.py:122
+#: .\djexample\settings.py:123
 msgid "Russian"
 msgstr "Русский"
 
-#: .\templates\homepage\main.html:5
+#: .\templates\homepage\main.html:5 .\templates\includes\header.html:12
 msgid "Главная"
 msgstr "Главная"
 
 #: .\templates\homepage\main.html:9
-msgid "Список товаров"
-msgstr "Список товаров"
+#, fuzzy
+#| msgid "Главная"
+msgid "Главная страница"
+msgstr "Главная"
 
-#: .\templates\homepage\main.html:14
-msgid "Список пуст"
-msgstr "Список пуст"
+#: .\templates\includes\footer.html:7
+msgid "О нас"
+msgstr "О нас"
+
+#: .\templates\includes\footer.html:8
+msgid "Краткая информация о проекте или компании."
+msgstr "Краткая информация о проекте или компании."
+
+#: .\templates\includes\footer.html:11
+msgid "Контакты"
+msgstr "Контакты"
+
+#: .\templates\includes\footer.html:12
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\templates\includes\footer.html:13
+msgid "Телефон"
+msgstr "Телефон"
+
+#: .\templates\includes\header.html:9
+msgid "MyWebsite"
+msgstr "МойСайт"
+
+#: .\templates\includes\header.html:14
+msgid "Профиль"
+msgstr "Профиль"
+
+#: .\templates\includes\header.html:15
+msgid "Выйти"
+msgstr "Выйти"
+
+#: .\templates\includes\header.html:17
+msgid "Войти"
+msgstr "Войти"
+
+#: .\templates\includes\header.html:20
+msgid "Админ панель"
+msgstr "Админ панель"
+
+#: .\templates\includes\header.html:47
+msgid "theme"
+msgstr "Тема"
+
+#: .\templates\includes\header.html:51
+msgid "light"
+msgstr "Светлая"
+
+#: .\templates\includes\header.html:54
+msgid "dark"
+msgstr "Тёмная"
 
 #: .\templates\includes\user_form.html:61
 msgid "dont_have_account_yet"
@@ -63,11 +114,11 @@ msgstr "Сохранить"
 msgid "authorization"
 msgstr "Авторизоваться"
 
-#: .\templates\users\login.html:12
+#: .\templates\users\login.html:13
 msgid "log_in_to"
 msgstr "Войти"
 
-#: .\templates\users\login.html:13
+#: .\templates\users\login.html:14
 msgid "sign_in"
 msgstr "Регистрация"
 
@@ -116,13 +167,21 @@ msgstr "Изменить почту"
 msgid "registration"
 msgstr "Регистрация"
 
-#: .\templates\users\signup.html:12
-msgid "greeting"
-msgstr "Встреча"
-
 #: .\templates\users\signup.html:13
+msgid "greeting"
+msgstr "Регистрация"
+
+#: .\templates\users\signup.html:14
 msgid "register"
 msgstr "Зарегистрироваться"
+
+#: .\templates\users\signup.html:18
+msgid "already_have_account"
+msgstr "Уже есть аккаунт?"
+
+#: .\templates\users\signup.html:20
+msgid "log_in"
+msgstr "Войти"
 
 #: .\users\apps.py:8
 msgid "users"

@@ -9,7 +9,17 @@
 {% endblock %}
 
 {% block content %}
-  {% trans "greeting" as greeting %}
-  {% trans "register" as register %}
-  {% include "includes/user_form.html" with title=greeting submit_text=register %}
+  <div class="container">
+    <h2>{% trans "greeting" as greeting %}</h2>
+    <p class="text-center">{% trans "register" as register %}</p>
+    {% include "includes/user_form.html" with title=greeting submit_text=register %}
+    <div class="text-center mt-3">
+      <p>
+        {% trans "already_have_account" %} 
+        <a href="{% url 'users:login' %}" class="text-decoration-none text-primary fw-semibold">
+          {% trans "log_in" %}
+        </a>
+      </p>
+    </div>
+  </div>
 {% endblock %}

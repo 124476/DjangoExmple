@@ -6,13 +6,9 @@
 
 {% block content %}
   <div class="container">
-    <h2>{% trans "Список товаров" %}</h2>
+    <h2>{% trans "Главная страница" %}</h2>
     <div class="card-group">
-      {% for item in items %}
-        {% include "includes/item_card.html" with item=item %}
-      {% empty %}
-        <p>{% trans "Список пуст" %}</p>
-      {% endfor %}
+      <h3>Всё нормально :)</h3>
     </div>
   </div>
 {% endblock %}
