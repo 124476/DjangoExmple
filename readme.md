@@ -39,7 +39,7 @@ pip install -r requirements.txt
 #### Переходим в папку с manage.py
 
 ```commandline
-cd djexmple
+cd djexample
 ```
 
 #### Настраиваем миграции
