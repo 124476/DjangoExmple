@@ -10,10 +10,10 @@
 git clone https://github.com/124476/DjangoExmple
 ```
 
-#### Переходим в папку djexample
+#### Переходим в папку DjangoExmple
 
 ```commandline
-cd djexample
+cd DjangoExmple
 ```
 
 #### Создаём и активируем виртуальное окружение
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 #### Переходим в папку с manage.py
 
 ```commandline
-cd djexample
+cd djexmple
 ```
 
 #### Настраиваем миграции
